@@ -1,0 +1,37 @@
+{
+	"nodes":[
+		{"id":"5d43a04217e586eb","type":"group","x":-140,"y":-420,"width":1425,"height":486,"color":"4","label":"用户提问时"},
+		{"id":"93008044ec027e8d","type":"group","x":-20,"y":-1080,"width":854,"height":543,"color":"2","label":"用户提问前"},
+		{"id":"581c2614a5054cde","type":"text","text":"index","x":295,"y":-780,"width":79,"height":60,"color":"2"},
+		{"id":"eded3bec0cd63202","type":"text","text":"docs","x":0,"y":-780,"width":94,"height":60,"color":"2"},
+		{"id":"51bcf83812a910b5","type":"text","text":"chunking","x":135,"y":-780,"width":119,"height":60,"color":"2"},
+		{"id":"3d11e12440c4a590","type":"text","text":"vector DB","x":348,"y":-600,"width":125,"height":60,"color":"2"},
+		{"id":"8dcadc7a16616c52","type":"text","text":"固定chunk\n滑动窗口\n文章结构（段落、章节、页码）\n[[21种RAG分块策略]]\n[[16种RAG增强策略]]","x":54,"y":-1040,"width":281,"height":140},
+		{"id":"7ea2e762ba743454","type":"text","text":"[[HNSW]]\n[[Embedding]]\n[[向量相似度]]","x":925,"y":-900,"width":209,"height":120},
+		{"id":"cd5760e2c50e5a0f","type":"text","text":"user text","x":-120,"y":-4,"width":105,"height":50,"color":"4"},
+		{"id":"3440c3ff45652b05","type":"text","text":"LLM意图分析","x":85,"y":-4,"width":140,"height":50,"color":"4"},
+		{"id":"0cba6600d05310f4","type":"text","text":"augment","x":645,"y":-212,"width":100,"height":60,"color":"4"},
+		{"id":"3b427dcfbb38ad87","type":"text","text":"向量只是一个中间过程，一般向量数据库中起码会有文本和向量两列内容","x":465,"y":-720,"width":340,"height":75},
+		{"id":"1c78371eecfac629","type":"text","text":"generation","x":925,"y":-8,"width":140,"height":54,"color":"4"},
+		{"id":"c9fbdfe19e716ebd","type":"text","text":"Output","x":1159,"y":-8,"width":106,"height":54,"color":"4"},
+		{"id":"c923be5922ed9542","type":"text","text":"retrieval","x":365,"y":-214,"width":100,"height":62,"color":"4"},
+		{"id":"cf20be0293440fcf","type":"text","text":"rerank","x":505,"y":-214,"width":100,"height":62,"color":"4"},
+		{"id":"3fab3c84e102969f","type":"text","text":"[[Bi-Encoder 与 Cross-Encoder]]","x":470,"y":-340,"width":170,"height":56}
+	],
+	"edges":[
+		{"id":"cf482a7027f03e71","fromNode":"3440c3ff45652b05","fromSide":"right","toNode":"c923be5922ed9542","toSide":"left","color":"4","label":"需要外部知识"},
+		{"id":"6902091dad6d7c1e","fromNode":"cd5760e2c50e5a0f","fromSide":"right","toNode":"3440c3ff45652b05","toSide":"left","color":"4"},
+		{"id":"d0fa0470ba031e2a","fromNode":"c923be5922ed9542","fromSide":"right","toNode":"cf20be0293440fcf","toSide":"left","color":"4"},
+		{"id":"36237f667d34447a","fromNode":"cf20be0293440fcf","fromSide":"right","toNode":"0cba6600d05310f4","toSide":"left","color":"4"},
+		{"id":"4f63545f4fd10940","fromNode":"3440c3ff45652b05","fromSide":"right","toNode":"1c78371eecfac629","toSide":"left","color":"4"},
+		{"id":"08658b8882147370","fromNode":"0cba6600d05310f4","fromSide":"right","toNode":"1c78371eecfac629","toSide":"left","color":"4"},
+		{"id":"732d0106881f56a8","fromNode":"1c78371eecfac629","fromSide":"right","toNode":"c9fbdfe19e716ebd","toSide":"left"},
+		{"id":"5cdf1be07ee35faa","fromNode":"c923be5922ed9542","fromSide":"top","toNode":"3d11e12440c4a590","toSide":"left","color":"1","label":"user query"},
+		{"id":"0d51138f34f1f2d0","fromNode":"3d11e12440c4a590","fromSide":"right","toNode":"c923be5922ed9542","toSide":"top","color":"1","label":"relate chunks"},
+		{"id":"5284ee69a2cd1c50","fromNode":"eded3bec0cd63202","fromSide":"right","toNode":"51bcf83812a910b5","toSide":"left","color":"2"},
+		{"id":"715a755ae51f30f7","fromNode":"51bcf83812a910b5","fromSide":"right","toNode":"581c2614a5054cde","toSide":"left","color":"2"},
+		{"id":"d3d856c0647e5bb8","fromNode":"581c2614a5054cde","fromSide":"right","toNode":"3d11e12440c4a590","toSide":"top","color":"2"},
+		{"id":"d64c94af25854090","fromNode":"8dcadc7a16616c52","fromSide":"bottom","toNode":"51bcf83812a910b5","toSide":"top","toEnd":"none"},
+		{"id":"7cce9ad86035e726","fromNode":"3fab3c84e102969f","fromSide":"bottom","toNode":"cf20be0293440fcf","toSide":"top","toEnd":"none"}
+	]
+}
