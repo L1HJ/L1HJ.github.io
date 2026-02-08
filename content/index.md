@@ -1,6 +1,5 @@
 ---
-title: Welcome to Quartz
+title: Welcome to L1HJ's Page
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+There is nothing here yet.
